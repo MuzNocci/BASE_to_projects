@@ -40,16 +40,10 @@ Para acessar o diretório do projeto, execute o comando abaixo:
 cd BASE_to_projects
 \`\`\`
 
-3. **Construa e inicie os contêineres:**
-Para construir e iniciar os contêineres, utilize o seguinte comando:
-\`\`\`bash
-docker-compose up --build
-\`\`\`
-
-4. **Configuração:**
+3. **Configuração:**
 Antes de executar o projeto, configure as variáveis de ambiente necessárias:
 
-5. **Editar o arquivo \`.env_example\` para \`.env\`:**
+4. **Editar o arquivo \`.env_example\` para \`.env\`:**
 Edite o arquivo \`.env\` e defina os seguintes valores:
 *   \`DJANGO_SECRET_KEY\`: Chave secreta para a aplicação Django.
 *   \`POSTGRES_DB\`: Nome do banco de dados PostgreSQL.
@@ -57,16 +51,16 @@ Edite o arquivo \`.env\` e defina os seguintes valores:
 *   \`POSTGRES_PASSWORD\`: Senha do banco de dados.
 *   E os outros valores conforme necessário.
 
-6. **Editar o arquivo \`.init-database.sh_example\` para \`init-database.sh\`:**
+5. **Editar o arquivo \`.init-database.sh_example\` para \`init-database.sh\`:**
 Substitua usuario, senhadousario e bancodedados, conforme necessário e de acordo com os dados contidos no arquivo "docker-compose.yml".
 
-7. **Iniciar os contêineres em segundo plano:**
+6. **Iniciar os contêineres em segundo plano:**
 Utilize o seguinte comando para iniciar os contêineres em segundo plano:
 \`\`\`bash
 docker-compose up --build -d
 \`\`\`
 
-8. **Parar os contêineres:**
+7. **Parar os contêineres:**
 Para parar os contêineres, utilize:
 \`\`\`bash
 docker-compose down
