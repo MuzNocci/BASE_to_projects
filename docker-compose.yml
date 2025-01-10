@@ -26,7 +26,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - static-data:/vol/static
-    command: gunicorn core.wsgi:application --workers 5 --bind 0.0.0.0:8000
     env_file:
       - "./django/.env"
     depends_on:
