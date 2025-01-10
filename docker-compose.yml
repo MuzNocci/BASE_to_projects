@@ -9,7 +9,7 @@ services:
       context: ./nginx
       dockerfile: Dockerfile
     ports:
-      - "8009:80"
+      - "8000:80"
     volumes:
       - static-data:/vol/static
     depends_on:

@@ -17,7 +17,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    location /administrator/database/677be1b4-6798-800c-bc5a-e4ea069aa7b0/ {
+    location /adminer/ {
         proxy_pass http://adminer:8080;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
