@@ -30,12 +30,15 @@ Antes de iniciar, certifique-se de ter os seguintes softwares instalados em seu 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
 1. **Clone o repositório:**
+
 \`\`\`bash
 git clone https://github.com/MuzNocci/BASE_to_projects.git
 \`\`\`
 
 2. **Navegue até o diretório do projeto:**
+
 Para acessar o diretório do projeto, execute o comando abaixo:
+
 \`\`\`bash
 cd BASE_to_projects
 \`\`\`
@@ -44,7 +47,9 @@ cd BASE_to_projects
 Antes de executar o projeto, configure as variáveis de ambiente necessárias:
 
 4. **Editar o arquivo \`.env_example\` para \`.env\`:**
+
 Edite o arquivo \`.env\` e defina os seguintes valores:
+
 *   \`DJANGO_SECRET_KEY\`: Chave secreta para a aplicação Django.
 *   \`POSTGRES_DB\`: Nome do banco de dados PostgreSQL.
 *   \`POSTGRES_USER\`: Usuário do banco de dados.
@@ -52,16 +57,21 @@ Edite o arquivo \`.env\` e defina os seguintes valores:
 *   E os outros valores conforme necessário.
 
 5. **Editar o arquivo \`.init-database.sh_example\` para \`init-database.sh\`:**
+
 Substitua usuario, senhadousario e bancodedados, conforme necessário e de acordo com os dados contidos no arquivo "docker-compose.yml".
 
 6. **Iniciar os contêineres em segundo plano:**
+
 Utilize o seguinte comando para iniciar os contêineres em segundo plano:
+
 \`\`\`bash
 docker-compose up --build -d
 \`\`\`
 
 7. **Parar os contêineres:**
+
 Para parar os contêineres, utilize:
+
 \`\`\`bash
 docker-compose down
 \`\`\`
