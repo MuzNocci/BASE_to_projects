@@ -3,12 +3,12 @@ set -e
 
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
 
-    CREATE USER 'usuario' WITH PASSWORD 'senhadousuario';
-    CREATE DATABASE 'bancodedados';
+    CREATE USER baseadmin WITH PASSWORD baseadminpass;
+    CREATE DATABASE basedb;
 
-    GRANT ALL PRIVILEGES ON DATABASE 'bancodedados' TO 'usuario';
+    GRANT ALL PRIVILEGES ON DATABASE basedb TO baseadmin;
 
-    ALTER USER 'usuario' CREATEDB;
-    ALTER DATABASE 'bancodedados' OWNER TO 'usuario';
+    ALTER USER baseadmin CREATEDB;
+    ALTER DATABASE basedb OWNER TO baseadmin;
 
 EOSQL
