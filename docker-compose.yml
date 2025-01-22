@@ -27,11 +27,11 @@ services:
     build:
       context: ./django
       dockerfile: Dockerfile
+    env_file:
+      - "./django/.env"
     volumes:
       - ./django/staticfiles:/var/www/public/staticfiles
       - ./django/medias:/var/www/public/medias
-    env_file:
-      - "./django/.env"
     depends_on:
       - postgres
       - redis
