@@ -28,6 +28,8 @@ DEBUG = config('DEBUG', cast=bool, default=False)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')])
 
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', cast=lambda v: [s.strip() for s in v.split(',')])
+
 
 # Application definition
 
@@ -135,9 +137,13 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'statics')]
+
 STATIC_URL = '/assets/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = '/vol/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/medias/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'medias')
 
 
 # Default primary key field type
